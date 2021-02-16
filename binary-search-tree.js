@@ -10,7 +10,12 @@ class BinarySearchTree {
 
 // create a balanced binary search tree
 function createBalancedBST(arr) {
-  // write base case, the base case is where there is one value in the array
+  // true base case
+  if (!arr.length) {
+    return nill;
+  }
+
+  // write base case, the base case is where there is one value in the array -- that cuts down on run time becausse recursive calls won't get triggers but isn't necessary
   if (arr.length === 1) {
     const node = new BinarySearchTree(arr[0]);
     return node;
