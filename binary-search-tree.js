@@ -18,7 +18,8 @@ function createBalancedBST(arr) {
   // find the right portion of the array
   const right = ar.slice(middleIndex + 1);
 
-    
+  const leftSubTree = createBalancedBST(left);
+  const rightSubTree = createBalancedBST(right);
 }
 
 console.dir(createBalancedBST([1, 2, 3, 5, 7, 9, 11]), [(depth: null)]);
