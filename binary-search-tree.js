@@ -1,4 +1,4 @@
-// create a BST class with its core functions -- insert, remove, find
+// CREATING A BALANCED BINARY SEARCH TREE
 // initialize a constructor
 class BinarySearchTree {
   constructor(key = null) {
@@ -41,7 +41,7 @@ function createBalancedBST(arr) {
 
 console.dir(createBalancedBST([1, 2, 3, 5, 7, 9, 11]), { depth: null });
 
-// create a balanced binary search tree
+// create a balanced binary search tree with lower time complexity
 function createBalancedBST(arr, start = 0, end = arr.length) {
   // true base case
   if (start === end) {
@@ -52,9 +52,7 @@ function createBalancedBST(arr, start = 0, end = arr.length) {
   const middleIndex = Math.floor((start + end) / 2);
   const middleValue = arr[middleIndex];
 
-  // // find the left portion of the array
   // const left = arr.slice(0, middleIndex);
-  // // find the right portion of the array
   // const right = arr.slice(middleIndex + 1);
 
   // create sub tress by calling a recursive function
@@ -65,3 +63,5 @@ function createBalancedBST(arr, start = 0, end = arr.length) {
   node.right = rightSubTree;
   return node;
 }
+
+// CREATING A BINARY SEARCH TREE WITH ITS CORE FUNCTIONS
