@@ -40,3 +40,28 @@ function createBalancedBST(arr) {
 }
 
 console.dir(createBalancedBST([1, 2, 3, 5, 7, 9, 11]), { depth: null });
+
+// create a balanced binary search tree
+function createBalancedBST(arr, start = 0, end = arr.length) {
+  // true base case
+  if (start === end) {
+    return null;
+  }
+
+  // used to split the array into two parts
+  const middleIndex = Math.floor((start + end) / 2);
+  const middleValue = arr[middleIndex];
+
+  // // find the left portion of the array
+  // const left = arr.slice(0, middleIndex);
+  // // find the right portion of the array
+  // const right = arr.slice(middleIndex + 1);
+
+  // create sub tress by calling a recursive function
+  const leftSubTree = createBalancedBST(arr, start, middleIndex);
+  const rightSubTree = createBalancedBST(arr, middleIndex + 1, end);
+  const node = new BinarySearchTree(middleValue);
+  node.left = leftSubTree;
+  node.right = rightSubTree;
+  return node;
+}
