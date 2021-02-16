@@ -10,12 +10,13 @@ class BinarySearchTree {
 
 // create a balanced binary search tree
 function createBalancedBST(arr) {
-  // write base case
+  // write base case, the base case is where there is one value in the array
   if (arr.length === 1) {
     const node = new BinarySearchTree(arr[0]);
-    return nod;
+    return node;
   }
 
+  // used to split the array into two parts
   const middleIndex = Math.floor(arr.length / 2);
   const middleValue = arr[middleIndex];
 
@@ -24,9 +25,9 @@ function createBalancedBST(arr) {
   // find the right portion of the array
   const right = ar.slice(middleIndex + 1);
 
+  // create sub tress by calling a recursive function
   const leftSubTree = createBalancedBST(left);
   const rightSubTree = createBalancedBST(right);
-
   const node = new BinarySearchTree(middleValue);
   node.left = leftSubTree;
   node.right = rightSubTree;
