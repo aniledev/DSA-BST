@@ -28,7 +28,7 @@ function createBalancedBST(arr) {
   // find the left portion of the array
   const left = arr.slice(0, middleIndex);
   // find the right portion of the array
-  const right = ar.slice(middleIndex + 1);
+  const right = arr.slice(middleIndex + 1);
 
   // create sub tress by calling a recursive function
   const leftSubTree = createBalancedBST(left);
