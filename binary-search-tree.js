@@ -10,9 +10,9 @@ class BinarySearchTree {
 
 // create a balanced binary search tree
 function createBalancedBST(arr) {
-  // true base case
+  // true base case - root is empty
   if (!arr.length) {
-    return nill;
+    return null;
   }
 
   // write base case, the base case is where there is one value in the array -- that cuts down on run time becausse recursive calls won't get triggers but isn't necessary
